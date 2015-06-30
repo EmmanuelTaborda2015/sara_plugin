@@ -72,15 +72,8 @@ class Frontera {
             switch ($_REQUEST ['seleccionar']) {
                 
                 case '1' :
-                    include_once ($this->ruta . "/formulario/registrarPagina.php");
-                    break;
-                case '2' :
-                    include_once ($this->ruta . "/formulario/registrarBloque.php");
-                    break;
-                
-                case '3' :
-                    include_once ($this->ruta . "/formulario/armarPagina.php");
-                    break;
+                    include_once ($this->ruta . "/formulario/agregarPlugin.php");
+                    break;              
                     
                 default:
                     include_once ($this->ruta . "/formulario/registro.php");

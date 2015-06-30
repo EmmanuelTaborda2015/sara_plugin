@@ -1,6 +1,6 @@
 <?php
 
-namespace development\registro;
+namespace development\plugin;
 
 if (! isset ( $GLOBALS ["autorizado"] )) {
     include ("../index.php");

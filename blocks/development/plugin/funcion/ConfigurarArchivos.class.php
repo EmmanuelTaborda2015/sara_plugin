@@ -16,10 +16,7 @@ class ConfigurarArchivos {
     
     }
     
-    function procesarFormulario() {
-            $_REQUEST['archivo'];
-            $_REQUEST['cadena'];
-            
+    function procesarFormulario() {            
             foreach ($_REQUEST ['variablesConf'] as $a){
             	$this->modificarArchivo( $a['archivo'], $a['cadena'] );
             }            

@@ -72,7 +72,6 @@ class Funcion {
 					break;
 				
 				case 'registrarBloque' :
-					echo "Aqui registro bloque";exit;
 					$resultado = $this->registrarBloque ();
 					break;
 				

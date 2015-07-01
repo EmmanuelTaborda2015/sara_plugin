@@ -18,11 +18,11 @@ class ConfigurarArchivos {
     
     function procesarFormulario() {            
             foreach ($_REQUEST ['variablesConf'] as $a){
-            	$this->modificarArchivo( $a['archivo'], $a['cadena'] );
+            	$this->modificarArchivo( $a['archivo'], $a['cadena'], $a['linea'] );
             }            
     }
     
-    function modificarArchivo($archivo, $cadena){
+    function modificarArchivo($archivo, $cadena, $linea){
 		//Se abre  el archivo en modo de lectura y se cargan todas sus lineas en un arreglo.
 		$F=fopen($archivo,'r');
 		
@@ -31,7 +31,7 @@ class ConfigurarArchivos {
 			$arreglo[]=fgets($F,4096);		
 		}
 			
-		$arreglo[3] = $cadena;
+		$arreglo[$linea] = $cadena;
 		
 		//Se abre el archivo en modo de sobrescribir modificando la linea # 3.
 		 

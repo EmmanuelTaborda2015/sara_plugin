@@ -1,7 +1,4 @@
 <?php
-//namespace reportes\reportico;
-
-
 
 if (! isset ( $GLOBALS ["autorizado"] )) {
     include ("../index.php");

@@ -45,31 +45,63 @@ class AgregarReportico {
         	 
         	$archivo = getcwd ().'/blocks/'.$_REQUEST ['moduloPlugin'].'/reportico/bloque.php';
         	$cadena = "namespace ".$modulo."reportico;\n"."use ".$modulo."reportico\\funcion\\redireccion;\n";
-        	$vars_conf[] = array("archivo"=>$archivo, "cadena"=>$cadena);
+        	$linea = 1; 
+        	$vars_conf[] = array("archivo"=>$archivo, "cadena"=>$cadena, "linea"=>$linea);
         	 
         	$archivo = getcwd ().'/blocks/'.$_REQUEST ['moduloPlugin'].'/reportico/Frontera.class.php';
         	$cadena = "namespace ".$modulo."reportico;\n";
-        	$vars_conf[] = array("archivo"=>$archivo, "cadena"=>$cadena);
-        	
+        	$linea = 1; 
+        	$vars_conf[] = array("archivo"=>$archivo, "cadena"=>$cadena, "linea"=>$linea);
+        	         	
         	$archivo = getcwd ().'/blocks/'.$_REQUEST ['moduloPlugin'].'/reportico/Funcion.class.php';
         	$cadena = "namespace ".$modulo."reportico;\n"."use ".$modulo."reportico\\funcion\\redireccion;\n";
-        	$vars_conf[] = array("archivo"=>$archivo, "cadena"=>$cadena);
+        	$linea = 1; 
+        	$vars_conf[] = array("archivo"=>$archivo, "cadena"=>$cadena, "linea"=>$linea);
         	 
         	$archivo = getcwd ().'/blocks/'.$_REQUEST ['moduloPlugin'].'/reportico/Lenguaje.class.php';
         	$cadena = "namespace ".$modulo."reportico;\n";
-        	$vars_conf[] = array("archivo"=>$archivo, "cadena"=>$cadena);
+        	$linea = 1; 
+        	$vars_conf[] = array("archivo"=>$archivo, "cadena"=>$cadena, "linea"=>$linea);
         	 
         	$archivo = getcwd ().'/blocks/'.$_REQUEST ['moduloPlugin'].'/reportico/Sql.class.php';
         	$cadena = "namespace ".$modulo."reportico;\n";
-        	$vars_conf[] = array("archivo"=>$archivo, "cadena"=>$cadena);
+        	$linea = 1; 
+        	$vars_conf[] = array("archivo"=>$archivo, "cadena"=>$cadena, "linea"=>$linea);
         	 
         	$archivo = getcwd ().'/blocks/'.$_REQUEST ['moduloPlugin'].'/reportico/funcion/redireccionar.php';
         	$cadena = "namespace ".$modulo."reportico\\funcion;\n";
-        	$vars_conf[] = array("archivo"=>$archivo, "cadena"=>$cadena);
+        	$linea = 1; 
+        	$vars_conf[] = array("archivo"=>$archivo, "cadena"=>$cadena, "linea"=>$linea);
         	
         	$archivo = getcwd ().'/blocks/'.$_REQUEST ['moduloPlugin'].'/reportico/formulario/consulta.php';
-        	$cadena = "set_include_path('blocks/".$_REQUEST ['moduloPlugin']."/reportico/script/reportico');\n"."require_once('blocks/".$_REQUEST ['moduloPlugin']."/reportico/script/reportico/reportico.php');\n";
-        	$vars_conf[] = array("archivo"=>$archivo, "cadena"=>$cadena);
+        	$cadena = "require_once('blocks/".$_REQUEST ['moduloPlugin']."/reportico/script/reportico/run.php');\n";
+        	$linea = 1; 
+        	$vars_conf[] = array("archivo"=>$archivo, "cadena"=>$cadena, "linea"=>$linea);       	
+        	        	
+        	$archivo = getcwd ().'/blocks/'.$_REQUEST ['moduloPlugin'].'/reportico/script/reportico/reportico.php';
+        	$cadena = "set_include_path('blocks/".$_REQUEST ['moduloPlugin']."/reportico/script/reportico');\n";
+        	$linea = 37;
+        	$vars_conf[] = array("archivo"=>$archivo, "cadena"=>$cadena, "linea"=>$linea);
+        	
+        	$archivo = getcwd ().'/blocks/'.$_REQUEST ['moduloPlugin'].'/reportico/script/reportico/reportico.php';
+			$cadena = "    var \$reportico_url_path = 'blocks/".$_REQUEST ['moduloPlugin']."/reportico/script/reportico';\n";        	
+			$linea = 464;
+        	$vars_conf[] = array("archivo"=>$archivo, "cadena"=>$cadena, "linea"=>$linea);
+        	
+        	$archivo = getcwd ().'/blocks/'.$_REQUEST ['moduloPlugin'].'/reportico/script/reportico/reportico.php';
+			$cadena = "    var \$url_path_to_reportico_runner = 'blocks/".$_REQUEST ['moduloPlugin']."/reportico/script/reportico/run.php';\n";						
+        	$linea = 466;
+        	$vars_conf[] = array("archivo"=>$archivo, "cadena"=>$cadena, "linea"=>$linea);
+        	
+        	$archivo = getcwd ().'/blocks/'.$_REQUEST ['moduloPlugin'].'/reportico/script/reportico/reportico.php';
+			$cadena = "    var \$url_path_to_assets = 'blocks/".$_REQUEST ['moduloPlugin']."/reportico/script/reportico';\n";        	
+        	$linea = 468;
+        	$vars_conf[] = array("archivo"=>$archivo, "cadena"=>$cadena, "linea"=>$linea);
+        	
+        	$archivo = getcwd ().'/blocks/'.$_REQUEST ['moduloPlugin'].'/reportico/script/reportico/reportico.php';
+			$cadena = "    var \$url_path_to_calling_script = 'blocks/".$_REQUEST ['moduloPlugin']."/reportico/script/reportico';\n";        	
+        	$linea = 472;        	
+        	$vars_conf[] = array("archivo"=>$archivo, "cadena"=>$cadena, "linea"=>$linea);
         	
         	$_REQUEST ['variablesConf'] = $vars_conf;        	
         }   

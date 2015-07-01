@@ -35,6 +35,7 @@
 
 // Include files
 include_once('smarty/libs/Smarty.class.php');
+
 require_once('swdb.php');
 require_once('swsql.php');
 require_once('swutil.php');
@@ -461,19 +462,15 @@ class reportico extends reportico_object
     var $drilldown_namespace = false;
 
     // URL Path to Reportico folder
-    var $reportico_url_path = false;
-
+       
     // Path to Reportico runner for AJAX use or standalone mode
-    var $url_path_to_reportico_runner = false;
-
+  
     // Path to frameworks assets folder
-    var $url_path_to_assets = false;
-
+   	
     // Path to calling script for form actions
     // In standalone mode will be the reportico runner, otherwise the
     // script in which reportico is embedded
-    var $url_path_to_calling_script = false;
-
+    
     // external user parameters as specified in sql as {USER_PARAM,your_parameter_name}
     // set with $q->user_parameters["your_parameter_name"] = "value";
 	var $user_parameters = array();

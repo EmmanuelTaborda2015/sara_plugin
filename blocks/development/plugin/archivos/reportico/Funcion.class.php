@@ -1,8 +1,4 @@
 <?php
-//namespace reportes\reportico;
-//use reportes\reportico\funcion\redireccion;
-
-
 
 if (!isset($GLOBALS ["autorizado"])) {
     include ("../index.php");

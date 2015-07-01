@@ -1,8 +1,4 @@
 <?php
-//namespace reportes\reportico;
-//use reportes\reportico\funcion\redireccion;
-
-
 
 // Evitar un acceso directo a este archivo
 if (! isset ( $GLOBALS ["autorizado"] )) {
